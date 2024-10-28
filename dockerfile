@@ -1,22 +1,21 @@
-# Use a lightweight Python image
-FROM python:3.9-slim
+FROM pytorch/pytorch
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+ RUN apt-get update && \
+     apt-get install -y gcc python3-dev build-essential && \
+         pip install --no-cache-dir numpy==1.23.5 pandas==1.5.3 gunicorn && \
+             rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
-WORKDIR /app
+             # Set the working directory in the container
+             WORKDIR /app
 
-# Copy the requirements file and the application code
-COPY requirements.txt .
-COPY . .
+             # Copy the current directory contents into the container at /app
+             COPY . .
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+             # Install additional Python dependencies
+             RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port your app runs on
-EXPOSE 5001
+             # Expose port 5000 to the outside world
+             EXPOSE 5001
 
-# Run the Flask application
-CMD ["python", "app.py"]
+             # Command to run the Flask app with Gunicorn for production
+             CMD ["gunicorn", "-b", "0.0.0.0:5001", "app:app"]
