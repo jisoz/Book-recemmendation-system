@@ -2,12 +2,16 @@ from flask import  Flask,render_template,request
 from fastai.vision.all import *
 import pickle
 from pathlib import Path
+import pathlib
+
 app = Flask(__name__)
 
 popularbooks=pickle.load(open('popularbooks.pkl','rb'))
 bookdata=pickle.load(open('bookdata.pkl','rb'))
 
 books=pickle.load(open('books.pkl','rb'))
+pathlib.WindowsPath = pathlib.PosixPath
+temp = pathlib.PosixPath
 learn_inf = load_learner(Path('export.pkl'))
 
 
