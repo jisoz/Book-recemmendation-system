@@ -38,9 +38,9 @@ setuptools
 torch
 torchvision
 
-wasabi
-weasel
-werkzeug
-wheel
+# wasabi
+# weasel
+# werkzeug
+# wheel
 
 
