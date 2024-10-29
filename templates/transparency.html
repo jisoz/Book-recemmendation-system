@@ -1,0 +1,97 @@
+<div class="container mt-5">
+    <h3 class="text-center text-custom mb-4">How Our AI Works</h3>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card mb-4 shadow rounded-3">
+                <div class="card-header text-warning">
+                    Understanding Ratings
+                </div>
+                <div class="card-body    text-light">
+                    <ul style="color: aliceblue;">
+                        <li><strong>User Ratings:</strong> Users rate books on a scale (e.g., 1 to 5 stars), indicating their preference.</li>
+                        <li><strong>Popularity Metrics:</strong> We consider the number of ratings and average ratings to prioritize well-regarded books.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow rounded-3">
+                <div class="card-header text-warning">
+                    Similarity and Ratings
+                </div>
+                <div class="card-body bg-dark text-light">
+                    <p style="color: aliceblue;">
+                        We use a trained machine learning model to compute the cosine similarity between books based on user ratings. This measures how similar different books are regarding user preferences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow rounded-3">
+                <div class="card-header text-warning">
+                    Practical Example
+                </div>
+                <div class="card-body bg-dark text-light">
+                    <p style="color: aliceblue;">When you input a book title (e.g., "Harry Potter and the Chamber of Secrets"), our system:</p>
+                    <ul style="color: aliceblue;">
+                        <li>Calculates the similarity between this book and others in our database.</li>
+                        <li>Recommends books with similar ratings based on user preferences.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow rounded-3">
+                <div class="card-header text-warning">
+                    Conclusion
+                </div>
+                <div class="card-body bg-dark text-light">
+                    <p style="color: aliceblue;">
+                        This approach allows our system to provide personalized recommendations, even if you haven't rated certain books directly. If we can't find suitable recommendations, it may be due to insufficient ratings or popularity of the input book.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #121212;
+        font-family: 'Arial', sans-serif;
+    }
+    .text-custom {
+        color: #ffcc00;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .bg-dark {
+        background-color: #1f1f1f !important;
+    }
+    .text-warning {
+        color: #ffc107 !important;
+    }
+    .rounded-3 {
+        border-radius: 0.75rem !important;
+    }
+    .shadow {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card-header {
+        background-color: #2c2c2c;
+        font-size: 1.2rem;
+        font-weight: 600; /* Adjusted font weight */
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        padding: 0.5rem 0;
+    }
+    @media (max-width: 768px) {
+        .text-custom {
+            font-size: 1.2rem;
+        }
+        .card-header {
+            font-size: 1rem;
+        }
+    }
+</style>
