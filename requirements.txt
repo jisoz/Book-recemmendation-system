@@ -31,16 +31,13 @@ pip
 
 scikit-learn
 scipy
-setuptools
 
 
+matplotlib==3.6.0
 
 torch
-torchvision
 
-# wasabi
-# weasel
-# werkzeug
-# wheel
+
+
 
 
