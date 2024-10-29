@@ -41,6 +41,8 @@ fastai==2.7.14
 # fastdownload==0.0.7
 # fastprogress==1.0.3
 # filelock==3.6.0
+scipy==1.8.0
+
 Flask==3.0.0
 # Flask-Migrate==4.0.5
 # Flask-MySQLdb==2.0.0
