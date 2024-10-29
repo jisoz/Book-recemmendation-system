@@ -109,4 +109,4 @@ def recommendbks():
     return render_template("recommend.html", data=booknames, images=images, authors=authors, years=years)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=4000)
