@@ -1,13 +1,14 @@
 from flask import  Flask,render_template,request
 from fastai.vision.all import *
 import pickle
+from pathlib import Path
 app = Flask(__name__)
 
 popularbooks=pickle.load(open('popularbooks.pkl','rb'))
 bookdata=pickle.load(open('bookdata.pkl','rb'))
 
 books=pickle.load(open('books.pkl','rb'))
-learn_inf = load_learner('export.pkl')
+learn_inf = load_learner(Path('export.pkl'))
 
 
 @app.route('/')
