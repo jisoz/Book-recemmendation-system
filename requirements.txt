@@ -36,14 +36,14 @@
 # executing==1.2.0
 # face-recognition==1.3.0
 # face-recognition-models==0.3.0
-fastai==2.7.14
+fastai
 # fastcore==1.5.29
 # fastdownload==0.0.7
 # fastprogress==1.0.3
 # filelock==3.6.0
-scipy>=1.10
+scipy
 
-Flask==3.0.0
+Flask
 # Flask-Migrate==4.0.5
 # Flask-MySQLdb==2.0.0
 # Flask-SQLAlchemy==3.1.1
@@ -89,7 +89,7 @@ numpy==1.22.3
 # openpyxl==3.1.2
 # opt-einsum==3.3.0
 # packaging==21.3
-pandas==1.4.2
+pandas
 # parso==0.8.3
 # phonenumbers==8.12.46
 # pickleshare==0.7.5
@@ -142,7 +142,7 @@ pandas==1.4.2
 # termcolor==2.2.0
 # thinc==8.2.3
 # threadpoolctl==3.1.0
-torch==2.2.1
+torch
 # torchvision==0.17.1
 # tornado==6.2
 # tqdm==4.66.2
