@@ -3,14 +3,14 @@
 # platform: win-64
 # created-by: conda 24.9.2
 
-fastai=2.7.18
+fastai==2.7.18
 
-flask=3.0.3
+flask==3.0.3
 
-gunicorn=23.0.0
+gunicorn==23.0.0
 
 
-numpy=1.26.4
+numpy==1.26.4
 
-pandas=1.5.3
+pandas==1.5.3
 
